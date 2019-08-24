@@ -1,0 +1,16 @@
+
+{% block body %}
+<link rel="stylesheet" href="/static/CSS/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div >
+
+ <img style="height:100%;width:100%" src='/static/pics/back.jpg' />
+<div style="background-color:#95a5ae;width:20px;">
+ <p class="knockout" style="font-size:50px;font-family:bookman;position:absolute;left:10%;top:20%;background-color:#95a5ae;font-size:50px">AVIATION SAFETY TOOLKIT USING DATA ANALYTICS</p>
+</div>
+ <a href="{{ url_for('dashboard') }}" class="Button" style="position:absolute;top:60%;font-size:20px;border: 3px solid #000;color: #000;left:30%;text-decoration:none;padding:8px;
+  border-radius:5px;"> Dashboard </a>
+ <a href="{{ url_for('aircraft_details') }}" class="Button" style="position:absolute;top:60%;font-size:20px;border: 3px solid #000;color: #000;left:60%;text-decoration:none;padding:8px;
+  border-radius:5px;">In-air Aircrafts</a>
+</div>
+ {% endblock %}

@@ -1,0 +1,30 @@
+{% block body %}
+<link rel="stylesheet" href="C:\Users\Administrator\PycharmProjects\abc\Fyp\templates\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" href="../static/CSS/main.css">
+<div class="top-bar" style="background-color:#2D6CA2;padding:1%;color:white;font-family:helvetica,serif;">
+    <img style="height:5%;width:2.6%;" src='../static/pics/icontop.png' />
+    <b>AVIATION SAFETY TOOLKIT</b>
+    <span style="float:right;"><a href="/"><i class="fa fa-home fa-2x" style="color:white;"></i></a></span>
+</div>
+<div class="col-md-9 " id="main-map" style="padding:0; margin:0; height:750px;">
+{% include 'map2.html' %}
+    <div>
+    <button style="position: absolute; top: 15%; left: 1%;padding: 10px; z-index: 400;font-size:12px;width:108px;border-radius:4px;background-color:white;color:#2D6CA2;">ALERT</button>
+    <button style="position: absolute; top: 25%; left: 1%;padding: 10px; z-index: 400;font-size:12px;border-radius:4px;background-color:white;color:#2D6CA2;">NOTIFICATION</button>
+    </div>
+</div>
+
+<div style="padding-top:0%;">
+    <div class="col-md-3">
+             <div class="navbar-default sidebar" role="navigation" style="height:100%; padding-left:0px; margin-left:0px;">
+                    <div class="sidebar-nav navbar-collapse" style="overflow:auto; height:700px;">
+                        <b>Displaying 0 records out of {{nTotal}}</b>
+                    {% for table in tables %}
+                        {{ table|safe }}
+                    {% endfor %}
+                    </div>
+             </div>
+    </div>
+
+</div>
+{% endblock %}
